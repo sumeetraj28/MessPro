@@ -2,6 +2,7 @@
   "name": "messpro",
   "version": "2.0.0",
   "description": "MessPro - Mess Management System",
+  "private": true,
   "main": "backend/index.js",
   "scripts": {
     "postinstall": "npm --prefix backend install && npm --prefix frontend install",
@@ -14,12 +15,18 @@
     "start": "npm --prefix backend start",
     "dev:backend": "npm --prefix backend run dev",
     "dev:frontend": "npm --prefix frontend run dev",
-    "dev": "npm-run-all --parallel dev:backend dev:frontend"
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "test": "echo \"No test specified\" && exit 0"
   },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   },
   "author": "Sumeet Raj <sumeetraj@rtcit.ac.in>",
+  "contributors": [],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -34,9 +41,17 @@
     "management",
     "system",
     "nodejs",
-    "react"
+    "react",
+    "mern",
+    "express",
+    "mongodb"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/sumeetraj28"
   }
 }
