@@ -3,10 +3,11 @@
   "version": "2.0.0",
   "description": "MessPro - Mess Management System",
   "scripts": {
-    "postinstall": "npm --prefix backend install && npm --prefix frontend install",
+    "postinstall": "npm run install:backend && npm run install:frontend",
+    "install:backend": "npm --prefix backend install",
+    "install:frontend": "npm --prefix frontend install",
     "build": "npm --prefix frontend run build",
     "start": "npm --prefix backend start",
-    "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "dev": "npm --prefix backend run dev"
   }
 }
