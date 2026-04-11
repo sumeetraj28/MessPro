@@ -1,7 +1,7 @@
 {
   "name": "messpro",
-  "version": "1.0.1",
-  "description": "A Node.js and Express project for efficient mess (canteen) management using MongoDB and Mongoose.",
+  "version": "1.0.2",
+  "description": "MessPro is a Node.js and Express application designed for streamlined and efficient mess (canteen) management. It leverages MongoDB with Mongoose for data handling and includes user authentication and dynamic menu planning features.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
