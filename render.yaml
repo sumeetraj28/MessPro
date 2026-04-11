@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: messpro
+    runtime: node
+    plan: free
+    buildCommand: npm run install:all && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+    disk:
+      name: messpro-data
+      mountPath: /opt/render/project/src/backend/db
+      sizeGB: 1
