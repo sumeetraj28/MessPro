@@ -1,46 +1,22 @@
 {
   "name": "messpro",
-  "version": "2.0.0",
-  "description": "MessPro - Mess Management System",
-  "private": true,
-  "main": "backend/index.js",
-  "type": "commonjs",
-  "files": [
-    "backend/",
-    "frontend/"
-  ],
+  "version": "1.0.0",
+  "description": "A project for managing mess operations efficiently.",
+  "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
-    "postinstall": "npm --prefix backend install && npm --prefix frontend install",
-    "install:backend": "npm --prefix backend install",
-    "install:frontend": "npm --prefix frontend install",
-    "install:all": "npm run install:backend && npm run install:frontend",
-    "build:frontend": "npm --prefix frontend run build",
-    "build:backend": "npm --prefix backend run build",
-    "build": "npm run build:frontend && npm run build:backend",
-    "start": "npm --prefix backend start",
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev",
-    "dev": "npm-run-all --parallel dev:backend dev:frontend",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "test": "echo \"No test specified\" && exit 0"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No tests yet\" && exit 0"
   },
-  "workspaces": [
-    "backend",
-    "frontend"
+  "keywords": [
+    "mess",
+    "management",
+    "express",
+    "mongoose",
+    "nodejs"
   ],
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "eslint": "^8.56.0",
-    "prettier": "^3.2.5",
-    "husky": "^8.0.3",
-    "concurrently": "^8.2.2"
-  },
-  "author": "Sumeet Raj <sumeetraj@rtcit.ac.in>",
-  "contributors": [],
-  "license": "MIT",
+  "author": "Sumeet Raj",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/sumeetraj28/MessPro.git"
@@ -49,22 +25,19 @@
     "url": "https://github.com/sumeetraj28/MessPro/issues"
   },
   "homepage": "https://github.com/sumeetraj28/MessPro#readme",
-  "keywords": [
-    "mess",
-    "management",
-    "system",
-    "nodejs",
-    "react",
-    "mern",
-    "express",
-    "mongodb"
-  ],
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+    "node": ">=18.0.0"
   },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/sumeetraj28"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
