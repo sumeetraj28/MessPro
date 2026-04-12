@@ -1,0 +1,13 @@
+<!-- 404.html for GitHub Pages SPA fallback -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/MessPro/" />
+    <script>
+      // For client-side routing fallback
+      var path = location.pathname.replace(/^\/MessPro/, '');
+      location.replace('/MessPro/' + (path ? '#' + path : ''));
+    </script>
+  </head>
+  <body></body>
+</html>
