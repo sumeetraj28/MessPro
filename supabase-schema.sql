@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS applications (
 
   experience_years integer DEFAULT 0,
   current_company  text,
-  current_role     text,
+  current_role_title text,
   expected_salary  text,
   notice_period    text,
 

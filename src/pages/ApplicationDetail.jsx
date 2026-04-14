@@ -175,7 +175,7 @@ export default function ApplicationDetail() {
                 </div>
                 <div>
                   <h1 className="text-xl font-black text-slate-900">{app.full_name}</h1>
-                  <p className="text-sm text-slate-500">{app.current_role || '—'}{app.current_company ? ` · ${app.current_company}` : ''}</p>
+                  <p className="text-sm text-slate-500">{app.current_role_title || '—'}{app.current_company ? ` · ${app.current_company}` : ''}</p>
                   <div className="flex items-center gap-3 mt-1">
                     {app.ai_score != null && (
                       <span className="flex items-center gap-1 text-sm font-bold text-orange-600">
@@ -227,7 +227,7 @@ export default function ApplicationDetail() {
                 ['Experience', app.experience_years != null ? `${app.experience_years} years` : '—'],
                 ['Expected Salary', app.expected_salary || '—'],
                 ['Notice Period', app.notice_period || '—'],
-                ['Current Role', app.current_role || '—'],
+                ['Current Role', app.current_role_title || '—'],
                 ['Current Company', app.current_company || '—'],
               ].map(([label, value]) => (
                 <div key={label}>

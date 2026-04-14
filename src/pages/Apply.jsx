@@ -17,7 +17,7 @@ export default function Apply() {
 
   const [form, setForm] = useState({
     full_name: '', email: '', phone: '',
-    current_role: '', current_company: '', experience_years: '',
+    current_role_title: '', current_company: '', experience_years: '',
     expected_salary: '', notice_period: '',
     linkedin_url: '', portfolio_url: '',
     cover_letter: '',
@@ -65,7 +65,7 @@ export default function Apply() {
           full_name:        form.full_name.trim(),
           email:            form.email.trim().toLowerCase(),
           phone:            form.phone.trim(),
-          current_role:     form.current_role.trim() || null,
+          current_role_title:     form.current_role_title.trim() || null,
           current_company:  form.current_company.trim() || null,
           experience_years: parseInt(form.experience_years) || 0,
           expected_salary:  form.expected_salary.trim() || null,
@@ -174,7 +174,7 @@ export default function Apply() {
           <Section title="Professional Background">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Field label="Current Role">
-                <input value={form.current_role} onChange={e => set('current_role', e.target.value)}
+                <input value={form.current_role_title} onChange={e => set('current_role_title', e.target.value)}
                   placeholder="Software Engineer" className={inputClass()} />
               </Field>
               <Field label="Current Company / Institute">

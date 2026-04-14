@@ -282,7 +282,7 @@ function CandidateCard({ app, rank, onEvaluate, evaluating }) {
           <div>
             <h3 className="font-bold text-slate-900">{app.full_name}</h3>
             <p className="text-xs text-slate-500">
-              {app.current_role || '—'}{app.current_company ? ` · ${app.current_company}` : ''} · {app.experience_years || 0}yr exp
+              {app.current_role_title || '—'}{app.current_company ? ` · ${app.current_company}` : ''} · {app.experience_years || 0}yr exp
             </p>
           </div>
           <div className="flex items-center gap-2 shrink-0">
